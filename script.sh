@@ -2,9 +2,10 @@
 
 FILE="file.txt"
 
-
+apt update
 apt install unzip jq -y 
-yum install -y unzip jq
+yum install epel-release -y
+yum install unzip jq -y
 
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
@@ -15,9 +16,9 @@ NEWRELIC_NAME=$(grep display_name $FILE |tr = " "|awk '{print $2}')
 
 if  [ "$NAME" = "$NEWRELIC_NAME" ]
 	then
-		echo "the same"
+		echo "Names are the same "
         else
-	        echo "different"
+	        echo "Names are different. Changing conf file"
 	        sed -i.bkp -s "s/$NEWRELIC_NAME/$NAME/" $FILE
 fi
 											                  
