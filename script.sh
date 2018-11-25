@@ -3,7 +3,7 @@
 FILE="file.txt"
 
 apt update
-apt install python3 dos2unix unzip jq -y 
+apt install python unzip jq -y 
 yum install epel-release -y
 yum install unzip jq -y
 
