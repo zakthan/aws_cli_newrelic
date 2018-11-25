@@ -1,0 +1,2 @@
+display_name=NAMEOFMACHINE
+license_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
